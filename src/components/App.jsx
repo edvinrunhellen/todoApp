@@ -2,6 +2,7 @@ import viteLogo from '/vite.svg';
 import './App.css';
 import { useState } from 'react';
 import Input from './input';
+import List from './List';
 
 
 function App() {
@@ -18,10 +19,9 @@ function App() {
 		<div className="App">
 			<img className="logo" src="/logo.png" alt="Tasktail" />
 			<Input setTodo={setTodo} todo={todo} addTodo={addTodo} />
+			<List todos={todos} />
 			<ul>
-				{todos.map((todo, i) => (
-					<li key={i}>{todo}</li>
-				))}
+				
 			</ul>
 		</div>
 	);
