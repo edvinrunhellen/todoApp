@@ -13,12 +13,11 @@ background-color: #1d1d1d;
 }
 
 * {
-  box-sizing: border-box;
+
 }
 
 body {
   margin: 0;
-  padding-top: 40px;
   min-width: 320px;
   min-height: 100vh;
 }

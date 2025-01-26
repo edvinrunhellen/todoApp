@@ -1,9 +1,11 @@
-const Input = ({setTodo, todo, addTodo}) => {
+import './input.css'
+
+const Input = ({ setTodo, todo, addTodo }) => {
 	return (
 		<div className="input-wrapper">
             <input
                 type="text"
-				className="Input"
+				className="input"
 				name="todo"
 				placeholder="Create a todo"
                 onChange={(event) => setTodo(event.target.value)}
