@@ -1,4 +1,6 @@
-const List = ({ todos }) => {
+import Item from './Item'
+
+const List = ({ todos, complete }) => {
     if (todos.length === 0) {
         return (
             <div className="empty">
@@ -8,11 +10,8 @@ const List = ({ todos }) => {
     }
     return (
         <div className="todo-list">
-            <ul>
-                {todos.map((todo, i) => (
-					<li key={i}>{todo}</li>
-				))}
-            </ul>     
+              
+            {todos.map((todo, i) => <Item text={todo} key={i} complete={complete} />)}
         </div>
     )
 }
