@@ -9,13 +9,15 @@ function App() {
 	const [todos, setTodos] = useState([]);
 
 	const addTodo = () => {
+		if (todo !== "")
 		setTodos([...todos, todo])
+		setTodo("")
 	}
 
 	return (
 		<div className="App">
 			<img className="logo" src="/logo.png" alt="Tasktail" />
-			<Input setTodo={setTodo} todo={todo} addtodo={addTodo} />
+			<Input setTodo={setTodo} todo={todo} addTodo={addTodo} />
 			<ul>
 				{todos.map((todo, i) => (
 					<li key={i}>{todo}</li>
