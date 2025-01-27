@@ -1,7 +1,16 @@
 import Item from './Item';
 import './List.css'
 
-const List = ({ todos, complete }) => {
+const List = ({ todos, complete, loading }) => {
+	if (loading) {
+		return (
+			<div className="todo-list">
+			{[1,2,3,4,5,6,7,8,9,10].map((todo, i) => (
+				<Item text={"Loading"} key={i} complete={complete} />
+			))}
+		</div>
+		)
+	}
 	if (todos.length === 0) {
 		return <div className="empty">All tasks completed</div>;
 	}

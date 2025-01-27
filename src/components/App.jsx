@@ -43,7 +43,7 @@ function App() {
 		<div className="App">
 			<img className="logo" src="/logo.png" alt="Tasktail" />
 			<Input setTodo={setTodo} todo={todo} addTodo={addTodo} />
-			{loading ? <h1>Loading</h1> : <List todos={todos} complete={complete} />}			
+			<List todos={todos} complete={complete} loading={loading} />		
 		</div>
 	);
 }
